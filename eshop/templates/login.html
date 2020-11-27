@@ -1,0 +1,53 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block css %}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  body{text-align: center;}
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .butt{
+      display: inline-block;
+  }
+{% endblock %}
+{% block body %}
+    {% csrf_token %}
+<div class="breadcrumb-area">
+    <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({% static 'img/bg-img/24.jpg'%});">
+    <h2>Login</h2>
+    </div>
+</div>
+<br>
+
+
+    <form class="form-Login" action='signin' method="POST">
+        <div class="container" style="width: 400px;">
+            <h1 class="h3 mb-3 font-weight-normal">LOGIN</h1>
+            <label for="inputName" class="sr-only">Username</label> {% csrf_token %}
+            <input type="name" Name="loUsername" id="inputname" class="form-control" placeholder="Username" required autofocus>
+            <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" Name="loPassword" class="form-control" placeholder="Password" required>
+            <br>
+            <div class="butt" style="width: 50%;">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                <br>
+                <a href="/shop/signup" ><button class="btn btn-lg btn-primary btn-block" type="button" >Sign in</button></a>
+                <p class="mt-5 mb-3 text-muted">&copy; 2020-2022</p>
+            </div>
+
+    </div>
+
+</form>
+
+
+{% endblock %}

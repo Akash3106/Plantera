@@ -1,0 +1,4 @@
+Django==3.0.8
+PyMySQL==0.8.0
+gunicorn==19.3.0
+Pillow==5.1.0

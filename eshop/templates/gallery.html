@@ -1,0 +1,31 @@
+{% extends 'basic.html'%}
+{% load static %}
+{% block body %}
+<div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({% static 'img/bg-img/24.jpg'%});">
+            <h2>GALLERY</h2>
+        </div>
+
+        <div class="widget">
+        <div class="widget-text">
+            <h1>  This is Fixed</h1>
+        </div>
+        </div>
+    <div class="co co-1">
+        <img src="{% static 'img/core-img/1.jpg'%}" width="400px" height="500px" alt="" class="img">
+      </div>
+      <div class="co co-2">
+        <img src="{% static 'img/core-img/2.jpg'%}" width="500px" height="600px" alt="" class="img">
+      </div>
+      <div class="co co-3">
+        <img src="{% static 'img/core-img/23.jpg'%}" width="700px" height="600px" alt="" class="img">
+      </div>
+      <div class="co co-4">
+        <img src="{% static 'img/core-img/17.jpg'%}" width="800px" height="500px" alt="" class="img">
+      </div>
+      <div class="co co-5">
+        <img src="{% static 'img/core-img/6.jpg'%}"  width="850px" height="700px" alt="" class="img">
+      </div>
+</div>
+{% endblock %}

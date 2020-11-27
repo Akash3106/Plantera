@@ -1,0 +1,60 @@
+{% extends 'basic.html' %}
+{% load static %}
+{%block css%}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  body{text-align: center;}
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .butt{
+      display: inline-block;
+  }
+{% endblock %}
+{% block body %}
+
+<div class="breadcrumb-area">
+    <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url({% static 'img/bg-img/24.jpg'%});">
+    <h2>Login</h2>
+    </div>
+</div>
+<br>
+
+<form class="form-signup" action="signupp" method="POST"  >
+       {% csrf_token %}
+    <div class="container" style="width: 400px;">
+    <img class="mb-4" src="{%static 'shop/leaf_1.png'%}" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">SIGNUP</h1>
+    <label for="inputname" class="sr-only">Username</label>
+    {% csrf_token %}
+    <input type="Name" name="Username" id="inputname" class="form-control" placeholder="Username" required autofocus>
+    <br>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="Email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <br>
+    <input type="password" id="inputPassword" name="Password" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+
+    </div>
+    <div class="butt" style="width: 50%;">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Signup</button>
+    <br>
+    <a href="/shop/login"><button class="btn btn-lg btn-primary btn-block" type="button" >Login</button></a>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2022</p>
+    </div>
+
+    </div>
+
+</form>
+
+
+{% endblock %}
